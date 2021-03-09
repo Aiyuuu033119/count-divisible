@@ -4,6 +4,7 @@
         
         public function divisible()
         {
+            echo('running');
             $x = $_POST['x'];
             $y = $_POST['y'];
             $p = $_POST['p'];
@@ -17,7 +18,7 @@
             $index = new Compute();
             $info = $index->result($data);
             
-            echo $info;
+            echo json_encode($info);
         }
 
         public function result($array) {	
