@@ -6,37 +6,32 @@
     $uri = trim($uri, '/');
     
     $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-    echo $uriSegments[1]; //returns codex
-    echo $uriSegments[2]; //returns foo
-    echo $uriSegments[3]; //returns bar
-
+    
     $index = new compute();
-    $index->index();
+    $index->index($uriSegments[2],$uriSegments[3],$uriSegments[4]);
 
     class compute{
-        public function index()
+        public function index($x,$y,$p)
         {
             echo('running');
+            echo $x; //returns codex
+            echo $y; //returns foo
+            echo $p; //returns bar
+
+            // $data = array(
+            //     'x' => $x,
+            //     'y' => $y,
+            //     'p' => $p
+            // );
+
+            // if ($array['x'] % $array['p'] == 0){
+            //     $info = $array['y'] / $array['p'] - $array['x'] / $array['p'] + 1;
+            // }
+
+            // $info = $array['y'] / $array['p'] - $array['x'] / $array['p'];
+
+            // echo json_encode($info);
         }
     }
-    
-    
-    // $x = $_POST['x'];
-    // $y = $_POST['y'];
-    // $p = $_POST['p'];
-
-    // $data = array(
-    //     'x' => $x,
-    //     'y' => $y,
-    //     'p' => $p
-    // );
-
-    // if ($array['x'] % $array['p'] == 0){
-    //     $info = $array['y'] / $array['p'] - $array['x'] / $array['p'] + 1;
-    // }
-
-    // $info = $array['y'] / $array['p'] - $array['x'] / $array['p'];
-
-    // echo json_encode($info);
 
 ?>
