@@ -1,5 +1,7 @@
 <?php
 
+    header('Access-Control-Allow-Origin: *');
+
     echo('running');
     $x = $_POST['x'];
     $y = $_POST['y'];
