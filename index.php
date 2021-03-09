@@ -13,7 +13,7 @@
     class compute{
         public function index($x,$y,$p)
         {
-            // echo('running');
+            echo('running');
             // echo $x; //returns codex
             // echo $y; //returns foo
             // echo $p; //returns bar
