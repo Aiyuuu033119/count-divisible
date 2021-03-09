@@ -17,7 +17,7 @@
             $index = new Compute();
             $info = $index->result($data);
             
-            echo json_encode($info);
+            echo $info;
         }
 
         public function result($array) {	
