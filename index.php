@@ -1,4 +1,10 @@
 <?php
+
+    setHeader('Access-Control-Allow-Origin', '*');
+    setHeader('Access-Control-Allow-Headers', '*');
+    setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    setStatusCode(200);
+
     echo('running');
     $x = $_POST['x'];
     $y = $_POST['y'];
