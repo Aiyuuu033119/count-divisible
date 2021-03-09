@@ -2,13 +2,14 @@
 
     header('Access-Control-Allow-Origin: *');
 
-    $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-
-    echo $uriSegments[1]; //returns codex
-    echo $uriSegments[2]; //returns foo
-    echo $uriSegments[3]; //returns bar
-
-    echo('running');
+    class compute{
+        public function index()
+        {
+            echo('running');
+        }
+    }
+    
+    
     // $x = $_POST['x'];
     // $y = $_POST['y'];
     // $p = $_POST['p'];
