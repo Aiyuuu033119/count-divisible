@@ -2,23 +2,29 @@
 
     header('Access-Control-Allow-Origin: *');
 
+    $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+    echo $uriSegments[1]; //returns codex
+    echo $uriSegments[2]; //returns foo
+    echo $uriSegments[3]; //returns bar
+
     echo('running');
-    $x = $_POST['x'];
-    $y = $_POST['y'];
-    $p = $_POST['p'];
+    // $x = $_POST['x'];
+    // $y = $_POST['y'];
+    // $p = $_POST['p'];
 
-    $data = array(
-        'x' => $x,
-        'y' => $y,
-        'p' => $p
-    );
+    // $data = array(
+    //     'x' => $x,
+    //     'y' => $y,
+    //     'p' => $p
+    // );
 
-    if ($array['x'] % $array['p'] == 0){
-        $info = $array['y'] / $array['p'] - $array['x'] / $array['p'] + 1;
-    }
+    // if ($array['x'] % $array['p'] == 0){
+    //     $info = $array['y'] / $array['p'] - $array['x'] / $array['p'] + 1;
+    // }
 
-    $info = $array['y'] / $array['p'] - $array['x'] / $array['p'];
+    // $info = $array['y'] / $array['p'] - $array['x'] / $array['p'];
 
-    echo json_encode($info);
+    // echo json_encode($info);
 
 ?>
