@@ -2,6 +2,17 @@
 
     header('Access-Control-Allow-Origin: *');
 
+    $uri = $_SERVER['REQUEST_URI'];
+    $uri = trim($uri, '/');
+    
+    $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+    echo $uriSegments[1]; //returns codex
+    echo $uriSegments[2]; //returns foo
+    echo $uriSegments[3]; //returns bar
+
+    $index = new compute();
+    $index->index();
+
     class compute{
         public function index()
         {
