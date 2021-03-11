@@ -12,13 +12,12 @@
         public function index($x,$y,$p)
         {
 
-            if ($x % $p == 0){
-                $info = $y / $p - $x / $p + 1;
+            if ($x%$p==0){
+                $info = $y/$p - $x/$p + 1;
             }
             else{
                 $info = $y / $p - $x / $p;
             }
-
 
             echo json_encode($info);
         }
