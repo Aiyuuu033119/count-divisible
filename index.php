@@ -11,16 +11,14 @@
     class compute{
         public function index($x,$y,$p)
         {
-            // echo('running');
-            // echo $x; //returns codex
-            // echo $y; //returns foo
-            // echo $p; //returns bar
 
             if ($x % $p == 0){
                 $info = $y / $p - $x / $p + 1;
             }
+            else{
+                $info = $y / $p - $x / $p;
+            }
 
-            $info = $y / $p - $x / $p;
 
             echo json_encode($info);
         }
